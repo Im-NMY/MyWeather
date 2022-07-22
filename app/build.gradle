@@ -36,6 +36,8 @@ dependencies {
     def lifecycle_version = "2.5.0-rc01"
     def retrofit_version = "2.9.0"
     def coroutines_version = "1.6.2"
+    def gson_version = "2.9.0"
+    def koin_version = "3.2.0"
 
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -54,4 +56,10 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    // Gson
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    // Gson_Converter
+    implementation "com.google.code.gson:gson:$gson_version"
+    // Koin
+    implementation "io.insert-koin:koin-android:$koin_version"
 }
