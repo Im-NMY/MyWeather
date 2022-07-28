@@ -22,22 +22,19 @@
         android:layout_below="@id/Temperature"
         android:layout_marginHorizontal="35sp"
         android:fontFamily="@font/alex_brush"
-        android:layout_marginTop="25sp"
+        android:layout_marginTop="5sp"
         android:text="@string/Wind"
         android:textColor="@color/teal_200"
         android:textSize="15sp"/>
 
-    <Button
-        android:id="@+id/Tap"
+    <ProgressBar
+        android:id="@+id/ProgressBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Wind"
-        android:layout_marginHorizontal="145sp"
-        android:layout_marginTop="25sp"
-        android:backgroundTint="@color/teal_200"
-        android:fontFamily="@font/alex_brush"
-        android:hint="@string/Tap"
-        android:textColorHint="@color/black"
-        android:textSize="20sp" />
+        android:layout_below="@id/Wind"
+        android:layout_marginHorizontal="170sp"
+        android:layout_marginTop="180dp"
+
+        />
 
 </RelativeLayout>

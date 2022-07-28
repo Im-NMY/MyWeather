@@ -12,13 +12,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 val weatherScreenModule = module {
 
-//     presenter = WeatherScreenPresenter(
-//        WeatherIteractor(
-//            WeatherRepoImpl(
-//                WeatherRemoteSource(WeatherApiClient.getApi())
-//            )
-//        )
-//    )
     single<OkHttpClient> { OkHttpClient.
     Builder().
     build()
