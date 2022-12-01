@@ -1,13 +1,28 @@
 package com.example.myweather.feature.weather_screen.data
 
-import com.example.myweather.feature.weather_screen.data.model.WeatherRemoteModel
-import com.example.myweather.feature.weather_screen.ui.model.WeatherModel
-import com.example.myweather.feature.weather_screen.ui.model.WindModel
+import com.example.myweather.feature.weather_screen.data.model.MainWeatherRemoteModel
+import com.example.myweather.feature.weather_screen.domain.model.*
 
-fun WeatherRemoteModel.temperatureToDomain() = WeatherModel(
-    temperature = this.main.temperature
+fun MainWeatherRemoteModel.mainToDomain() = MainModel(
+    temp = this.main.temp,
+    tempMax = this.main.tempMax,
+    tempMin = this.main.tempMin,
+    pressure = this.main.pressure,
+    humidity = this.main.humidity
 )
 
-fun WeatherRemoteModel.windToDomain() = WindModel(
-    windDeg = this.wind.windDeg
+fun MainWeatherRemoteModel.windToDomain() = WindModel(
+    speed = this.wind.speed
+)
+
+fun MainWeatherRemoteModel.sysToDomain() = SysModel(
+    sunset = this.sys.sunset,
+    sunrise = this.sys.sunrise
+)
+
+fun MainWeatherRemoteModel.toDomain() = MainWeatherModel(
+    main = mainToDomain(),
+    wind = windToDomain(),
+    sys = sysToDomain(),
+    date = date,
 )

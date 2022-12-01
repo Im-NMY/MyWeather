@@ -4,7 +4,6 @@ import android.app.Application
 import com.example.myweather.feature.weather_screen.di.weatherScreenModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
-import org.koin.core.KoinApplication
 import org.koin.core.context.startKoin
 
 class App: Application() {
@@ -15,7 +14,6 @@ class App: Application() {
             androidLogger()
             androidContext(this@App)
             modules(weatherScreenModule)
-
         }
     }
 }
