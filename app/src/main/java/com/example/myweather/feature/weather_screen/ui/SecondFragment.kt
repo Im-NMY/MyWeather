@@ -34,10 +34,14 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         binding.wind.text = viewState.speed.toString()
         binding.pressure.text = viewState.pressure.toString()
         binding.humidity.text = viewState.humidity.toString()
-        binding.sunrise.text = SimpleDateFormat("hh:mm a", Locale.UK).format(Date(viewState.sunrise*1000))
-        binding.sunset.text = SimpleDateFormat("hh:mm a", Locale.UK).format(Date(viewState.sunset*1000))
-        binding.updatedAt.text = SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH).format(Date(viewState.date*1000))
+        binding.sunrise.text =
+            SimpleDateFormat("hh:mm a", Locale.UK).format(Date(viewState.sunrise * 1000))
+        binding.sunset.text =
+            SimpleDateFormat("hh:mm a", Locale.UK).format(Date(viewState.sunset * 1000))
+        binding.updatedAt.text = SimpleDateFormat(
+            "dd/MM/yyyy hh:mm a",
+            Locale.ENGLISH
+        ).format(Date(viewState.date * 1000))
     }
-
 
 }

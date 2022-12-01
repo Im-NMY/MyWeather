@@ -1,8 +1,6 @@
 package com.example.myweather.feature.weather_screen.data
 
-import com.example.myweather.feature.weather_screen.domain.model.MainModel
 import com.example.myweather.feature.weather_screen.domain.model.MainWeatherModel
-import com.example.myweather.feature.weather_screen.domain.model.WindModel
 
 class WeatherRepoImpl(private val weatherRemoteSource: WeatherRemoteSource) : WeatherRepo {
 
